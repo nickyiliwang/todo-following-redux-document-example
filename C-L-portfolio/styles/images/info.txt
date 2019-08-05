@@ -1,0 +1,14 @@
+Fonts
+Open Sans (Google Fonts)
+Playfair Display (Google Fonts)
+Great Vibes (Google Fonts)
+
+Icons
+Font Awesome
+
+Colours
+ Orange #e1560e 
+DarkGrey #23292c 
+Beige #eae5d6
+
+lchan font is gravity

@@ -1,0 +1,29 @@
+header nav {
+  @include flexCenter;
+  justify-content: space-evenly;
+  flex-direction: row;
+  background-color: rgba($primaryBlack, 0.7);
+  width: 100%;
+
+  // image div
+  div.img-container {
+    width: 5%;
+  }
+
+  ul {
+    display: flex;
+    li {
+      justify-content: space-evenly;
+      flex-direction: row;
+      margin: 40px;
+      a {
+        color: rgba($primaryWhite, 0.5);
+      }
+    }
+  }
+}
+//  end of aside
+
+#{$anchorTagHoverFocus} {
+  color: $primaryWhite;
+}

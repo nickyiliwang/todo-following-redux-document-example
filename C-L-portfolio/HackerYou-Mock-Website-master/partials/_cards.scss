@@ -1,0 +1,68 @@
+section.cards {
+  // general padding
+  padding: 110px 0 75px 0;
+
+  // flexContainer
+  ul.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      // extra space for margin
+      width: calc(50% - 23px);
+
+      figure {
+        background-color: $primaryWhite;
+        // strips all but bottom margin
+        margin: 0 0 42px 0;
+
+        figcaption {
+          position: relative;
+          // figcaption general padding
+          padding: 25px 35px;
+
+          // red date box between figure and figcaption
+          h3.date {
+            // font style
+            @include fontSize(20);
+            letter-spacing: 1px;
+            // box style
+            background-color: $primaryRed;
+            color: white;
+            padding: 4px 16px;
+            // box position
+            @include position(absolute, -22px, 42px, auto, auto);
+          }
+
+          h2 {
+            @include fontSize(40);
+            padding-bottom: 12px;
+          }
+
+          p {
+            padding-bottom: 16px;
+          }
+
+          button {
+            // transition
+            transition: color 500ms;
+          }
+
+          button:hover {
+            color: $primaryHoverRed;
+          }
+        }
+        // end of figcaption
+      }
+      // end of figure
+    }
+
+    // middle margin separating cards
+    .card1,
+    .card3 {
+      margin-right: 35px;
+    }
+  }
+  // end of flexContainer
+}
+// end of cards

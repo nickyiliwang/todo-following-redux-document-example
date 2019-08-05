@@ -1,0 +1,80 @@
+section.gallery {
+  background-color: $primaryBlack;
+  color: $primaryBeige;
+  // rid of padding bottom
+  padding: 50px 0 0 0;
+
+  img {
+    // same height so images looks even
+    height: 200px;
+  }
+
+  // gallery content
+  article.gallery-contents {
+    @include flexCenter;
+    flex-wrap: wrap;
+    p {
+      padding: 30px;
+      width: 80%;
+      text-align: center;
+    }
+  }
+  // end of gallery content
+
+  // gallery-menu
+  nav.gallery-menu {
+    @include flexCenter;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      border: 1px solid grey;
+      padding: 10px;
+      margin: 30px 0;
+
+      li {
+        margin: 0 10px;
+
+        a {
+          color: $primaryBeige;
+          padding: 0 15px;
+          border-right: 1px solid grey;
+        }
+      }
+    }
+  }
+  // end of gallery-menu
+
+  // gallery-images
+  ul.gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      width: calc(100% / 5);
+    }
+  }
+  figure {
+    position: relative;
+    margin: 0;
+  }
+
+  figcaption {
+    @include position(absolute, 0, 0, 0, 0);
+    text-align: center;
+    display: none;
+    color: white;
+    padding-top: 60px;
+    @include fontSize(20);
+  }
+
+  figure:hover figcaption {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+  }
+
+}
+// end of gallery-images
+
+#{$anchorTagHoverFocus} {
+  text-decoration: underline;
+}

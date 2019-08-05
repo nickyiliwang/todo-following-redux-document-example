@@ -1,0 +1,116 @@
+// Google fonts
+
+// font-family: 'Playfair Display', serif;
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400i,700&display=swap");
+
+// font-family: 'Cabin', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Cabin:400i,500&display=swap");
+
+// setting font-family
+
+body {
+  font-family: "Cabin", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+}
+
+// setting font size
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include fontSize(10);
+}
+
+h1 {
+  @include fontSize(34);
+}
+
+h2 {
+  @include fontSize(46);
+}
+
+h3 {
+  @include fontSize(22);
+  font-weight: 500;
+}
+
+p {
+  @include fontSize(23);
+  font-weight: 500;
+  line-height: 37px;
+}
+
+a {
+  @include fontSize(21);
+}
+
+span {
+  @include fontSize(10);
+}
+
+button {
+  @include fontSize(20);
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+}
+
+// wrapper styles
+.wrapper {
+  max-width: 1440px;
+  width: 82%;
+  margin: 0 auto;
+}
+
+// stripping anchor tag default styling
+a {
+  text-decoration: none;
+}
+
+// stripping ul default styling
+ul {
+  list-style: none;
+}
+
+// stripping default margin/padding
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+// image fills container
+img {
+  width: 100%;
+}
+
+// setting text transforms
+a,
+h3 {
+  text-transform: uppercase;
+}
+
+// button styles
+button,
+input[type="button"] {
+  background-color: $primaryWhite;
+  color: $primaryRed;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+// show menu class for hamburger menu
+.show.menu {
+  display: block;
+}

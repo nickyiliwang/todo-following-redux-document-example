@@ -1,0 +1,183 @@
+footer {
+  background-color: $navFooterBackground;
+  color: $primaryPureWhite;
+
+  // top footer
+  div.footer-top {
+    // general padding
+    padding: 60px 0;
+
+    // flexContainer
+    .flexContainer {
+      display: flex;
+      flex-direction: row;
+
+      // splitting to create the same divide as cards section
+      .footer-left,
+      .footer-right {
+        width: calc(50% - 23px);
+      }
+
+      // left footer
+      .footer-left {
+        // this margin separates the footer down middle
+        margin-right: 35px;
+        display: flex;
+
+        // info
+        article.footer-info {
+          // hard width
+          width: 380px;
+          h3 {
+            padding-bottom: 5px;
+          }
+          p {
+            @include fontSize(22);
+          }
+        }
+        // end of info
+
+        // nav
+        nav.footer-nav {
+          display: flex;
+
+          // flex grow to push left margin
+          flex: 1 auto;
+          // places the footer nav on the far right
+          justify-content: flex-end;
+
+          ul {
+            display: flex;
+            flex-direction: column;
+
+            li {
+              padding-bottom: 5px;
+
+              a {
+                color: $primaryPureWhite;
+                font-weight: 500;
+
+                // transition animation
+                transition: color 500ms;
+              }
+
+              #{$anchorTagHoverFocus} {
+                color: $primaryRed;
+              }
+            }
+          }
+          // end of ul
+        }
+        // end of nav
+      }
+      // end of left footer
+
+      // right footer
+      .footer-right {
+        padding-left: 10px;
+
+        p {
+          padding: 5px 0 20px;
+        }
+
+        // form
+        form.footer-form {
+          display: flex;
+
+          // input font styles & pseudos states
+          input[type="email"],
+          input::placeholder {
+            // inner text styles
+            @include fontSize(20);
+            font-family: "Playfair Display", serif;
+            font-weight: 700;
+            font-style: italic;
+          }
+
+          // email box size
+          input[type="email"] {
+            // flex: 1 auto;
+            margin-right: 3px;
+            padding: 15px;
+            border: none;
+            outline: none;
+            border-style: none;
+          }
+
+          // email on focus
+          input[type="email"]:focus {
+            border: 2px solid $primaryRed;
+          }
+
+          // email invalid
+          input:invalid {
+            color: $primaryRed;
+          }
+
+          // subscribe button
+          input[type="button"] {
+            // button styles
+            @include fontSize(20);
+            color: $primaryWhite;
+            background-color: $primaryRed;
+            padding: 14px 35px;
+            // transition
+            transition: background-color 500ms;
+          }
+
+          // subscribe button on hover
+          input[type="button"]:hover {
+            background-color: $primaryHoverRed;
+          }
+        }
+        // end of form
+      }
+      // end of right footer
+    }
+    // end of top footer
+  }
+
+  // bottom
+  div.footer-bottom {
+    background-color: $primaryBlack;
+    // general padding
+    padding: 15px 0;
+
+    .flexContainer {
+      display: flex;
+
+      // copyright
+      div.copyright {
+        flex: 1 auto;
+      }
+
+      // social icons
+      ul.social-icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        // hard width
+        width: 140px;
+
+        // extra paddings for windowsOS taskbar
+        padding-bottom: 25px;
+
+        // icon size
+        a {
+          color: $primaryWhite;
+          @include fontSize(16);
+          transition: color 500ms;
+        }
+
+        // anchor on hover
+        #{$anchorTagHoverFocus} {
+          color: $primaryHoverRed;
+        }
+      }
+      // end of social icons
+    }
+    // end of flexContainer
+  }
+  // end of bottom
+}
+// end of footer

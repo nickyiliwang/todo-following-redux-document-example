@@ -1,0 +1,38 @@
+// variables
+
+// font colours + pseudo states
+$primaryBlack:#23292c;
+$primaryBeige: #eae5d6;
+$primaryOrange: #e1560e;
+$primaryWhite: white;
+
+// background colours
+$primaryBackground: #eae5d6;
+$navFooterBackground: rgba($primaryBlack, 0.6);
+
+// anchor tags on hover & focus
+$anchorTagHoverFocus: "a:focus, a:hover";
+
+// mixins/functions
+
+// font sizes turn into rem values
+@mixin fontSize($sizeValue) {
+  font-size: $sizeValue * 1px;
+  font-size: ($sizeValue/10) * 1rem;
+}
+
+// vertical + horizontal centering w/ flexbox
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Positioning (use it on dates on cards)
+@mixin position($type, $top, $right, $bottom, $left) {
+  position: $type;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}

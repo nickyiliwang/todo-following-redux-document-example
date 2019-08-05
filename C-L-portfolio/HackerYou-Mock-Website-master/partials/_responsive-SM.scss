@@ -1,0 +1,473 @@
+// max-widths BLUE
+//  Portrait tablet and small desktops
+@media (max-width: 940px) {
+
+  // nav (hamburger transform)
+  header {
+    // hamburger menu
+    .hamburger {
+      display: block;
+      @include fontSize(34);
+    }
+
+    // hamburger icon hover transition
+    .fas.fa-bars {
+      transition: color 500ms;
+    }
+    .fas.fa-bars:hover {
+      color: $primaryHoverBlack;
+    }
+
+    .menu {
+      display: none;
+      // nav aside menu position
+      @include position(absolute, 104px, 0, -104px, 65vw);
+      background: rgba($primaryHoverBlack, 0.7);
+      color: $primaryPureWhite;
+    }
+
+    .menu ul {
+      @include flexCenter;
+      align-items: flex-end;
+      flex-direction: column;
+
+      a {
+        font-size: 5vw;
+        text-align: left;
+        width: 100%;
+        padding: 30px;
+      }
+    }
+    // end of hamburger menu
+  }
+  // end of nav
+
+  // footer
+  footer {
+    // top footer
+    div.footer-top {
+      // general padding
+      padding: 60px 0;
+
+      // flexContainer
+      .flexContainer {
+        display: flex;
+        flex-direction: column;
+
+        // full width stacking
+        .footer-left,
+        .footer-right {
+          width: 100%;
+        }
+
+        // left footer
+        .footer-left {
+          // this margin separates the footer down middle
+          margin-right: 0px;
+          display: flex;
+
+          // info
+          article.footer-info {
+            margin-right: 25px;
+            width: calc(70% - 25px);
+          }
+          // end of info
+
+          // nav
+          nav.footer-nav {
+            padding-right: 35px;
+          }
+          // end of nav
+        }
+        // end of left footer
+
+        // right footer
+        .footer-right {
+          // strips general padding
+          padding-left: 0;
+
+          // form
+          form.footer-form {
+            // email and paragraph box size
+            input[type="email"],
+            p {
+              width: 70%;
+            }
+          }
+          // end of form
+        }
+        // end of right footer
+      }
+      // end of top footer
+    }
+
+    // bottom
+    div.footer-bottom {
+      .flexContainer {
+        // social icons
+        ul.social-icons {
+          // strip extra paddings for windowsOS taskbar
+          padding-bottom: 0px;
+        }
+        // end of social icons
+      }
+      // end of flexContainer
+    }
+    // end of bottom
+  }
+  // end of footer
+}
+
+@media (max-width: 740px) {
+
+  // nav
+  header {
+    .menu {
+      @include position(absolute, 104px, 0, calc(50vh - 104px), 65vw);
+    }
+
+    .menu ul {
+      a {
+        // scaling down the font
+        font-size: 4vw;
+      }
+    }
+  }
+  // end of nav
+
+  // hero
+  section.hero {
+    background-size: fill;
+    background-position: left;
+    min-height: 50vh;
+    // using vw to push article approx same px
+    padding-top: 10vw;
+
+    // block of text with white background
+    article {
+      padding: 5vw;
+      // hard width
+      width: 60%;
+
+      h2 {
+        font-size: 3.5vw;
+        padding-bottom: 10px;
+      }
+
+      p {
+        font-size: 2vw;
+        line-height: 2.5vw;
+      }
+    }
+  }
+  // end of hero
+
+  // carousel button reposition
+  section.bootcamp {
+    // position outside
+    .flickity-prev-next-button.previous {
+      left: -11vw;
+    }
+    .flickity-prev-next-button.next {
+      right: -11vw;
+    }
+  }
+  // end of carousel
+
+  // footer
+  footer {
+    // top footer
+    div.footer-top {
+      // general padding
+      padding: 60px 0;
+
+      // flexContainer
+      .flexContainer {
+        display: flex;
+        flex-direction: column;
+
+        // full width stacking
+        .footer-left,
+        .footer-right {
+          width: 100%;
+        }
+
+        // left footer
+        .footer-left {
+          // this margin separates the footer down middle
+          margin-right: 0px;
+          display: flex;
+
+          // info
+          article.footer-info {
+            margin-right: 25px;
+            width: calc(70% - 25px);
+          }
+          // end of info
+
+          // nav
+          nav.footer-nav {
+            padding-right: 35px;
+          }
+          // end of nav
+        }
+        // end of left footer
+
+        // right footer
+        .footer-right {
+          // strips general padding
+          padding-left: 0;
+          display: flex;
+          flex-direction: column;
+
+          // form
+          form.footer-form {
+            // email box size
+            input[type="email"],
+            p {
+              width: 100%;
+            }
+          }
+          // end of form
+        }
+        // end of right footer
+      }
+      // end of top footer
+    }
+  }
+}
+
+// Mobiles Portrait carousel button reposition
+@media (max-width: 480px) {
+
+  section.hero {
+    // centering the box
+    padding: 20px auto;
+
+    // block of text with white background
+    article {
+      h2 {
+        font-size: 5vw;
+      }
+
+      p {
+        font-size: 3vw;
+        line-height: 5vw;
+      }
+      width: 80%;
+    }
+  }
+
+  // carousel
+  section.bootcamp {
+    .main-carousel {
+      // margin top and bottom, while centering carousel
+      width: 100%;
+    }
+
+    // smaller previous & next buttons
+    .flickity-prev-next-button {
+      width: 30px;
+      height: 30px;
+    }
+
+    // arrow positions
+    .flickity-prev-next-button.previous {
+      // placing the arrows on the bottom of carousel
+      left: 0;
+      top: 50vw;
+    }
+    .flickity-prev-next-button.next {
+      // placing the arrows on the bottom of carousel
+      right: 0;
+      top: 50vw;
+    }
+  }
+  // end of carousel
+}
+// end of media
+
+// Mobiles Portrait
+@media (max-width: 320px) {
+
+  // wrapper width to 95%
+  .wrapper {
+    width: 95%;
+  }
+
+  // nav
+  header {
+    .flexContainer div.logo button.refresh {
+      display: none;
+    }
+
+    .image-switch {
+      display: block;
+      width: 15vw;
+    }
+
+    .menu {
+      // nav aside menu position
+      @include position(absolute, 113px, 0, 217px, 0);
+    }
+  }
+  // end of nav
+
+  // hero (fonts and height scales with vw)
+  section.hero {
+    min-height: 45vh;
+    // using vw to push article approx same px
+    padding-top: 20vw;
+
+    // block of text with white background
+    article {
+      // give the white box transparency
+      background-color: rgba($primaryWhite, 0.8);
+      padding: 4.5vw;
+      // percentage width creates space on right
+      width: 100%;
+
+      h2 {
+        font-size: 8vw;
+        padding-bottom: 18px;
+      }
+
+      p {
+        font-size: 5vw;
+      }
+    }
+  }
+  // end of hero
+
+  // carousel
+  section.bootcamp {
+    min-height: 65vh;
+    h2 {
+      font-size: 8vw;
+    }
+
+    p {
+      font-size: 4vw;
+      line-height: auto;
+    }
+
+    h3 {
+      font-size: 3vw;
+    }
+    .main-carousel {
+      margin: 20px auto;
+      .carousel-cell {
+      }
+    }
+
+    // removes arrows
+    .flickity-prev-next-button.previous,
+    .flickity-prev-next-button.next {
+      display: none;
+    }
+  }
+  // end of carousel
+
+  // cards
+  section.cards {
+    // strips padding
+    padding: 0;
+
+    ul.flexContainer li figure figcaption h2 {
+      font-size: 6vw;
+      letter-spacing: 1px;
+    }
+    ul.flexContainer li figure figcaption p {
+      font-size: 3vw;
+      letter-spacing: 1px;
+      line-height: 10px;
+    }
+    ul.flexContainer li figure figcaption button {
+      font-size: 3vw;
+    }
+  }
+  // end of cards
+
+  // footer
+  footer {
+    // top footer
+    div.footer-top {
+      // general padding
+      padding: 60px 0;
+
+      // flexContainer
+      .flexContainer {
+        // splitting to create the same divide as cards section
+        .footer-left,
+        .footer-right {
+          // use full width
+          width: 100%;
+        }
+
+        // left footer
+        .footer-left {
+          // extra padding bottom to separate
+          padding-bottom: 20px;
+          // strips margin right
+          margin-right: 0px;
+          @include flexCenter;
+          flex-wrap: wrap;
+          flex-direction: column;
+
+          nav {
+            @include flexCenter;
+
+            ul {
+              @include flexCenter;
+            }
+          }
+        }
+      }
+      // end of left footer
+
+      // right footer
+      .footer-right {
+        // strips left padding for desktop
+        padding-left: 0px;
+
+        // form
+        form.footer-form {
+          // email box size
+          input[type="email"],
+          p {
+            // setting width so submit button stays inbound
+            width: 70%;
+          }
+        }
+        // end of form
+      }
+      // end of right footer
+    }
+    // end of top footer
+
+    // bottom
+    div.footer-bottom {
+      .flexContainer {
+        // centering everything wrapping and flex column;
+        flex-wrap: wrap;
+        font-display: column;
+        justify-content: center;
+        text-align: center;
+        // social icons
+        ul.social-icons {
+          // padding separating the copyright
+          padding-top: 20px;
+          // hard width remains
+          width: 140px;
+
+          // strips extra paddings for windowsOS taskbar
+          padding-bottom: 0px;
+        }
+        // end of social icons
+      }
+      // end of flexContainer
+    }
+    // end of bottom
+  }
+  // end of footer
+}

@@ -1,0 +1,24 @@
+section.hero {
+  // doggo background
+  background-image: url("../styles/images/cute-doggo-on-couch.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  // leaving margin so navbar don't overlap
+  min-height: calc(100vh - 115px);
+  // pushes down text box
+  padding-top: 185px;
+
+  // block of text with white background
+  article {
+    background-color: $primaryWhite;
+    padding: 65px;
+    // hard width
+    width: 600px;
+
+    h2 {
+      padding-bottom: 18px;
+    }
+  }
+}
+

@@ -1,0 +1,12 @@
+footer {
+  background: url(../styles/images/Icons/map.png);
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: $primaryBlack;
+  height: 70vh;
+
+  form {
+    @include flexCenter;
+  }
+}
